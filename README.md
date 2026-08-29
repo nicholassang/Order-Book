@@ -62,7 +62,10 @@ ctest
 3. **UnorderedMap**: ~0.8M orders/sec
 4. **Vector**: ~0.6M orders/sec
 
-Map-based is fastest, likely because it uses binary search
-UnorderedMap is the 2nd fastest, it follows linear search for each order
-Vector is the next fastest because the insertion cost is O(n)
-Piority Queu has Lazy deletion overhead, making it the slowest
+Map-based is fastest, because the implemnetation of map undergoing retrieveals and intersections beats out the unordered_map and vector.
+
+While vector is typically used in the industry, this architecture assumes a naive vector that suffers greatly from insertion.
+
+UNordered_map probably struggled with hash collisions and its resolution of that.
+
+Piority Queue has Lazy deletion overhead, making it the slowest
